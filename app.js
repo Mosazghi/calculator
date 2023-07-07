@@ -18,17 +18,13 @@ const operators = ["+", "−", "×", "÷"];
 
 digitBtns.forEach((digit) => {
   digit.addEventListener("click", () => {
-    let opIndex = findOperator();
     removeLeadingZero();
-    equation[opIndex + 1] === "." ? console.log("yes") : console.log("no");
     addDigit(digit.value);
-    console.log(equation);
   });
 });
 operatorBtns.forEach((operator) => {
   operator.addEventListener("click", () => {
     addOperator(operator.value);
-    console.log(equation);
   });
 });
 
@@ -77,7 +73,6 @@ function clearAll() {
   hasOperator = false;
   equationIsFilled = false;
   result = 0;
-  console.clear();
 }
 
 function clearDigit() {
@@ -130,7 +125,6 @@ function operate() {
 function removeLeadingZero() {
   equation = equation.filter((element, index) => {
     if (!hasOperator && index === 0 && element === "0" && equation[1] !== ".") {
-      console.log("HERR");
       return false;
     }
     if (
@@ -148,7 +142,7 @@ function addDigit(digit) {
   let opIndex = findOperator();
 
   if (display.innerText.length > 10) return;
-  
+
   equation.push(digit);
 
   if (opIndex !== -1) {
@@ -164,16 +158,13 @@ function addOperator(operator) {
 
   if (equation.length !== 0) {
     if (!hasOperator) {
-      console.log("HER_1111");
       equation.push(operator);
       hasOperator = true;
     } else if (equationIsFilled) {
-      console.log("HER_2");
       operate();
       equation.push(operator);
       hasOperator = true;
     } else {
-      console.log("HER_3");
       equation[operatorIndex] = operator;
     }
     equationTxt.innerText = equation.join("");
