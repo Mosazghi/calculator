@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+body {
+  background: #404950;
+  color: white;
+  font-family: "Cambria Math";
+  margin-top: 150px;
+}
+
+#calculator {
+  width: 350px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #abc6c2;
+  padding: 8px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #404950;
+}
+
+#equation {
+  color: gray;
+  font-size: medium;
+  min-height: 25.33px;
+  text-align: start;
+}
+
+#display {
+  font-size: 2rem;
+  min-height: 49.34px;
+}
+
+.row {
+  margin: 1%;
+  padding: 1%;
+}
+
+.btn {
+  margin: 1%;
+  font-size: xx-large;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#display-wrapper {
+  color: black;
+  border: 1px solid;
+  border-color: #abc6c2;
+  border-radius: 8px;
+  padding: 8px;
+  background: #404950;
+}
+#display {
+  text-align: end;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+}
+a > i {
+  color: #000000;
+  font-size: 1.2rem;
+}
